@@ -18,9 +18,9 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename="/">
         <Routes>
-          <Route path="/" element={<Navigate to="/auth" replace />} />
+          <Route index element={<Auth />} />
           <Route path="/auth" element={<Auth />} />
           <Route path="/discover" element={<Discover />} />
           <Route path="/watched" element={<Watched />} />
